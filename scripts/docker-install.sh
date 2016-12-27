@@ -103,6 +103,7 @@ run "yum -y install \
 	php-mcrypt \
 	php-mysqli \
 	php-mysqlnd \
+	php-redis \
 	php-opcache \
 	php-pear \
 	php-pdo \
