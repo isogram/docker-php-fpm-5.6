@@ -31,13 +31,13 @@ DATE="$( date '+%Y-%m-%d' )"
 run "sed -i'' 's/build-date=\".*\"/build-date=\"${DATE}\"/g' Dockerfile"
 
 # Build Docker
-run "docker build --no-cache -t cytopia/${NAME} ."
+run "docker build --no-cache -t isogram/${NAME} ."
 
 
 ###
 ### Retrieve information afterwards and Update README.md
 ###
-docker run -d --name my_tmp_${NAME} -t cytopia/${NAME}
+docker run -d --name my_tmp_${NAME} -t isogram/${NAME}
 PHP_MODULES="$( docker exec my_tmp_${NAME} php -m )"
 PHP_VERSION="$( docker exec my_tmp_${NAME} php -v )"
 docker stop "$(docker ps | grep "my_tmp_${NAME}" | awk '{print $1}')"

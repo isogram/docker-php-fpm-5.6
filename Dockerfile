@@ -2,18 +2,18 @@
 ## PHP-FPM 5.6
 ##
 FROM centos:7
-MAINTAINER "cytopia" <cytopia@everythingcli.org>
+MAINTAINER "isogram" <emshidiq@gmail.com>
 
 
 ##
 ## Labels
 ##
 LABEL \
-	name="cytopia's PHP-FPM 5.6 Image" \
+	name="isogram's PHP-FPM 5.6 Image" \
 	image="php-fpm-5.6" \
-	vendor="cytopia" \
+	vendor="isogram" \
 	license="MIT" \
-	build-date="2016-11-15"
+	build-date="2016-12-28"
 
 
 ##

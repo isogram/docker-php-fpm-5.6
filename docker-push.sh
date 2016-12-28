@@ -15,7 +15,7 @@ NAME="$( grep 'image=".*"' Dockerfile | sed 's/^[[:space:]]*//g' | awk -F'"' '{p
 
 
 
-USR="cytopia"
+USR="isogram"
 IMG="${USR}/${NAME}"
 REG="https://index.docker.io/v1/"
 

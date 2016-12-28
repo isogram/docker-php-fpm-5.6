@@ -174,7 +174,7 @@ else
 		if [ ! -f "${XDEBUG_CONFIG}" ]; then
 			log "err" "No xdebug configuration file found."
 			log "err" "This should not happen."
-			log "err" "Please file a bug at https://github.com/cytopia/docker-php-fpm-5.6"
+			log "err" "Please file a bug at https://github.com/isogram/docker-php-fpm-5.6"
 			exit 1
 		fi
 

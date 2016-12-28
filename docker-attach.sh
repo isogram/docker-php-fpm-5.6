@@ -27,14 +27,14 @@ fi
 
 NAME="$( grep 'image=".*"' Dockerfile | sed 's/^[[:space:]]*//g' | awk -F'"' '{print $2}' )"
 
-COUNT="$( docker ps | grep -c "cytopia/${NAME}" || true)"
+COUNT="$( docker ps | grep -c "isogram/${NAME}" || true)"
 if [ "${COUNT}" != "1" ]; then
 	echo "${COUNT} container running. Unable to attach."
 	exit 1
 fi
 
-DID="$(docker ps | grep "cytopia/${NAME}" | awk '{print $1}')"
+DID="$(docker ps | grep "isogram/${NAME}" | awk '{print $1}')"
 
-echo "Attaching to: cytopia/${NAME}"
+echo "Attaching to: isogram/${NAME}"
 run "docker exec -i -t ${DID} env TERM=xterm /bin/bash -l"
 

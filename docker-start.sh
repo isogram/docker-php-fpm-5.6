@@ -25,4 +25,4 @@ if ! grep -q 'image=".*"' Dockerfile > /dev/null 2>&1; then
 fi
 NAME="$( grep 'image=".*"' Dockerfile | sed 's/^[[:space:]]*//g' | awk -F'"' '{print $2}' )"
 
-run "docker run -i -t cytopia/${NAME}"
+run "docker run -i -t isogram/${NAME}"
